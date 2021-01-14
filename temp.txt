@@ -1,0 +1,113 @@
+La till denna rad längst upp i package.json
+"homepage": "/bilskatt",
+
+innan jag körde
+npm run build
+npm start BROWSER=chromium
+
+/*
+{ brandarray.map((model, index) => (
+  <div key={ index }>
+    <p>{ model.NybilsprisPerModell.Modell }</p>
+  </div>
+))}
+*/
+//{  this.props.bilobjects[0].NybilsprisPerModell.map((i) => <li key={i}>{i}</li>)}
+// model.NybilsprisPerModell.Kod
+kollaBilmarkeModeller(){
+  let brandarray = this.props.bilobjects;//this.state.sbrandarray-this.props.bilobjects.Marke;
+
+  //console.log("Längd:" + Object.getOwnPropertyNames(brandarray));
+  //console.log("MittObjekt: " + Object.values(brandarray[0]));
+  console.log("Bilobjects: " + this.props.bilobjects.length)
+
+  let svar = "svar";
+  let svar2 = "125cb";
+  //let arrayModels = [];
+  //arrayModels = JSON.parse(brandarray);
+
+  if (this.props.bilobjects.length !==0){
+    //console.log("arrayModels: " + brandarray[0].Marke);
+    console.log("NybilsbriserPerModel.längd: " + brandarray[0].NybilsprisPerModell.length);
+    //console.log(brandarray[0].NybilsprisPerModell.map((Modell, Kod) => <li key={Kod}>{Modell}</li>));
+    //console.log(brandarray[0].NybilsprisPerModell.map((i) => <li key={i}>{i}</li>));
+    //console.log(brandarray[0].NybilsprisPerModell.map((Modell, Kod) => Modell));
+    svar2 = brandarray[0].NybilsprisPerModell.map((Modeller) => {
+    <div>
+      <h4>Modell {Modeller.Modell[0].toString()}</h4>
+      <p>{Modeller.Kod[0].toString()}</p>
+    </div>
+    console.log("Trött" + JSON.stringify(Modeller.Modell));
+    console.log("Trött2" + Modeller.Modell[0]);
+    });
+    console.log("Inne");
+  }
+
+  return (
+    <div><h4>modeller</h4>
+      <p>{ svar2 }</p>
+    </div>
+  );
+}//end kollaBilmarkeModeller()
+//  <p>{JSON.stringify(this.props.bilobjects)}</p>
+//
+//{this.kollaBilmarkeModeller()}
+
+
+//-----------------------------------------------------------------------------
+//listaBilar = this.state.s_allabilar.map((carbrand) =>
+  //<li id="{carbrand}" > {carbrand} </li>
+
+//);
+
+//<li> elemnten måste lopas i <ul> element och varje element måste ha key!
+//Obs denna funkar ej - förmodlige för avsakand av ES6
+/*  listaMedBilmarkenEs6 = () => {
+  let t_lista = this.state.s_allabilar;
+
+    return (
+      <ul>
+        {t_lista.map(bilbrand => (
+          <li key={bilbrand}>{bilbrand}</li>
+        ))}
+      </ul>
+    );
+}
+*/
+//DENNA FUNKAR! :)
+//<li> elemnten måste lopas i <ul> element och varje element måste ha key!
+/*  listaMedBilmarken() {
+
+  let ulStyle = {
+  position: 'absolute',
+  paddingLeft: '100px',
+  textAlign: 'left',
+  listStyleType: 'circle'
+  };
+
+
+  let t_lista = this.state.s_allabilar;
+
+  return (
+    <ul style={ ulStyle }>
+      {t_lista.map(bilbrand => (
+        <li style={{position: "ralative", left: "0px"}} onClick={this.clickValdBil} key={bilbrand}>{bilbrand}</li>
+      ))}
+    </ul>
+  );
+}
+*/
+
+
+
+
+
+        //this.setState({state_is_showing: true})
+        //text_felt_filter = this.showFilter;
+        //Skapar filter object och skickar med array med bilmodeller
+        //text_felt_filter = < Modellfilter brandmodels={this.props.bilobjects[0].NybilsprisPerModell} />
+
+
+        //let t_lista_array = t_array.map(this.listaBilmodeller);
+        //this.setState({lista_array: t_lista_array});
+        //this.setState({lista_array: t_array.map(this.listaBilmodeller)});

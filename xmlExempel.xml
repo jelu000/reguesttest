@@ -1,0 +1,17 @@
+<Nybilspriser xmlns="se/skatteverket/bilformansberakning/nybilspriser/3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="se/skatteverket/bilformansberakning/nybilspriser/3.0 http://xmls.skatteverket.se/se/skatteverket/bilformansberakning/nybilspriser/V3.0/Nybilspriser.xsd">
+<FilSkapadDatum>2020-10-30</FilSkapadDatum>
+<Tillverkningsar>2020</Tillverkningsar>
+<Personbil>
+<Marke>Abarth</Marke>
+<NybilsprisPerModell>
+<Kod>20AB001</Kod>
+<Modell>124 Spider 1.4 Turbo 170HK AT</Modell>
+<Nybilspris>388900</Nybilspris>
+<BransleTyp>Bensin</BransleTyp>
+</NybilsprisPerModell>
+<NybilsprisPerModell>
+<Kod>20AB002</Kod>
+<Modell>124 Spider 1.4 Turbo 170HK MT</Modell>
+<Nybilspris>368900</Nybilspris>
+<BransleTyp>Bensin</BransleTyp>
+</NybilsprisPerModell>
