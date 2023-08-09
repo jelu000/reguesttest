@@ -5,6 +5,7 @@ innan jag körde
 npm run build
 npm start BROWSER=chromium
 
+
 /*
 { brandarray.map((model, index) => (
   <div key={ index }>

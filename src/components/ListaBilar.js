@@ -182,7 +182,7 @@ class ListaBilar extends Component {
 
         <div className="column">
           <p style={pStyle}>
-            En tjänstebil är en förmån och ska därför beskattas
+          En tjänstebil är en förmån och ska därför beskattas.
           </p>
 
           <p style={pStyle}>
